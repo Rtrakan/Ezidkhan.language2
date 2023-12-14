@@ -25,6 +25,33 @@ h1{
   padding: 20px; 
   color: #fff;
 }
+<html>
+    <head>
+        <style>
+            h1,h2{
+                text-align: center;
+            }
+            *{
+                font-family: 'Verdana';
+            }
+            @font-face {
+                font-family: YZIDI;
+                src: url(YZIDI.ttf);
+            }
+            #braille{
+                font-family: YZIDI, Verdana;
+            }
+          body{
+  font-family: Arial;
+  Helvetica: sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+h1{
+  padding: 20px; 
+  color: #fff;
+}
 #container{
   max-width: 450px;
   margin: 0 auto;
@@ -67,8 +94,7 @@ textarea::placeholder{
                  document.addEventListener('DOMContentLoaded', function(){ 
                 var typingTimer
                 var doneTypingInterval = 1000
-                var $inuk = docum
-                    ent.getElementById("inuk")
+                var $inuk = document.getElementById("inuk")
                 var $braille = document.getElementById("braille")
                 $inuk.addEventListener('keyup', inukFunction)
                 function inukFunction () {
@@ -130,8 +156,6 @@ textarea::placeholder{
                     "ظ" : "𐺖",
                     "ع" : "𐺗", 
                     "غ" : "𐺘", 
-                    "ء": "𐺀",  
-                    "ة" : "𐺀",  
                     "ی" : "𐺨", 
                     "ۆ" : "𐺥", 
                     "ک" : "𐺝", 
@@ -139,6 +163,9 @@ textarea::placeholder{
                     "ڵ" : "𐺠", 
                     "ە" : "𐺦", 
                     "'": "𐺗",
+                  
+                    "'": "𐺗",
+                  
                   
                 }
             }, false);
